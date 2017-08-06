@@ -1,13 +1,13 @@
 //
-//  AppDelegate.m
+//  TestViewController.h
 //  AndyGuide
 //
 //  Created by Andy on 2017/8/6.
 //  Copyright © 2017年 andy. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+@interface TestViewController : UIViewController
 
 @end
