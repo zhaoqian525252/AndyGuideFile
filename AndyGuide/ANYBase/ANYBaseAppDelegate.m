@@ -10,11 +10,15 @@
 
 #import "TestViewController.h"
 
-@interface ANYBaseAppDelegate()
+#import "ANYTabBarViewController.h"
 
+@interface ANYBaseAppDelegate()<UITabBarControllerDelegate>
+@property (nonatomic,retain) ANYTabBarViewController * tabBarView;
 @end
 
 @implementation ANYBaseAppDelegate
+
+@synthesize tabBarView = _tabBarView;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,14 +26,53 @@
     
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
-    TestViewController * vc = [[TestViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    _myWindow.rootViewController = nav;
-    [_myWindow makeKeyWindow];
+//    TestViewController * vc = [[TestViewController alloc]init];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+//    _window.rootViewController = nav;
+    
+    self.window.rootViewController = [self setTabBarController];
+    
+    [_window makeKeyAndVisible];
     
     
     
     return YES;
+}
+
+#pragma mark -- 1创建分栏控制器
+
+
+- (ANYTabBarViewController *)setTabBarController{
+    
+    NSArray * controllers = @[@"MainViewController", @"MessageViewController", @"AmusementViewController", @"SettingViewController"];
+    
+    NSArray * titles = @[@"首页", @"消息", @"娱乐", @"设置"];
+    
+    NSArray * normals = @[@"cooperation_icon_normal", @"mine_icon_normal", @"report_icon_normal", @"remoney_icon_normal"];
+    
+    NSArray * selecteds = @[@"cooperation_icon_selected", @"mine_icon_selected", @"report_icon_selected", @"remoney_icon_selected"];
+    
+    UIColor * normal = [UIColor lightGrayColor];
+    UIColor * selected = [UIColor colorWithRed:56/255.0 green:21/255.6 blue:96/255.0 alpha:1];
+    
+    //创建TabBarViewController
+    _tabBarView = [[ANYTabBarViewController alloc]initWithControllers:controllers andTitles:titles andNormalImages:normals andSelectedImages:selecteds andNormalColor:normal andSelectedColor:selected];
+
+    [_tabBarView setTabBar];
+
+    [_tabBarView setControllers];
+    
+    [_tabBarView setTabBarFrame:CGRectMake(0, 149.0f, SCREEN_WIDTH, 49.0f)];
+    
+    _tabBarView.delegate = self;
+    
+    return _tabBarView;
+    
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+
+    NSLog(@"%ld",(long)tabBarController.selectedIndex);
 }
 
 

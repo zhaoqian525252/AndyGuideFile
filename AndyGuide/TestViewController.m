@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "TestTwoViewController.h"
 
 @interface TestViewController ()
 
@@ -26,7 +27,21 @@
     label.backgroundColor = [UIColor redColor];
     [self.view addSubview:label];
     
+    label.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeInterface)];
+    
+    [label addGestureRecognizer:tap];
+
+    
 }
+
+- (void)changeInterface{
+    
+//    TestTwoViewController *two = [[TestTwoViewController alloc]init];
+//    [self.navigationController pushViewController:two animated:YES];
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
