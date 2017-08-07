@@ -33,10 +33,10 @@ NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
     self.badgeBGColor   = [UIColor redColor];
     self.badgeTextColor = [UIColor whiteColor];
     self.badgeFont      = [UIFont systemFontOfSize:12.0];
-    self.badgePadding   = 6;
-    self.badgeMinSize   = 8;
-    self.badgeOriginX   = self.frame.size.width - self.badge.frame.size.width/2;
-    self.badgeOriginY   = -4;
+    self.badgePadding   = 3;
+    self.badgeMinSize   = 5;
+    self.badgeOriginX   = self.frame.size.width/2 + 18.0f/2 - self.badge.frame.size.width/2;
+    self.badgeOriginY   = 1.0f;
     self.shouldHideBadgeAtZero = YES;
     self.shouldAnimateBadge = YES;
     // Avoids badge to be clipped when animating its scale

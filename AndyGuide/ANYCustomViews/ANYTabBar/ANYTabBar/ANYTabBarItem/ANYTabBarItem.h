@@ -12,4 +12,12 @@
 
 @interface ANYTabBarItem : UIButton
 - (void)setTabBarItemWithModel:(ANYTabBarModel *)model;
+
+/** 设置title高度 */
+
+/** 设置图片宽度 */
+
+/** 气泡数量 */
+-(void)badgeNumber:(NSInteger)badgeNumber;
+
 @end

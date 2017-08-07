@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ANYTabBarViewController : UITabBarController
-
+/** 字体颜色 */
 @property (nonatomic,retain)UIColor * normalColor;
 
 @property (nonatomic,retain)UIColor * selectedColor;
@@ -21,7 +21,6 @@
 @property (nonatomic,retain)NSMutableArray * selectedImageArray;
 
 @property (nonatomic,retain)NSMutableArray * controllerArray;
-
 
 
 - (instancetype)initWithControllers:(NSArray *)controllers andTitles:(NSArray *)titles andNormalImages:(NSArray *)normalImages andSelectedImages:(NSArray *)selectedImages andNormalColor:(UIColor *)normalColor andSelectedColor:(UIColor *)selectedColor;

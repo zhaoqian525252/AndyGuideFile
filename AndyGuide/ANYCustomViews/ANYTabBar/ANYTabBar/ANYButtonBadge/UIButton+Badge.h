@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Valnet Inc. All rights reserved.
 //
 
+
+/**
+ * ANYTabBar 添加气泡
+ */
 #import <UIKit/UIKit.h>
 
 @interface UIButton (Badge)

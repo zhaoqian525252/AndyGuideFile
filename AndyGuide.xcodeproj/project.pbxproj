@@ -12,6 +12,7 @@
 		101C989E1F346680001EDFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101C989C1F346680001EDFFE /* Main.storyboard */; };
 		101C98A01F346680001EDFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101C989F1F346680001EDFFE /* Assets.xcassets */; };
 		101C98A31F346680001EDFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101C98A11F346680001EDFFE /* LaunchScreen.storyboard */; };
+		102312411F3810FE009B68C5 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 102312401F3810FE009B68C5 /* UIButton+Badge.m */; };
 		102A30B81F36EE380054F406 /* ANYBaseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A30B71F36EE370054F406 /* ANYBaseAppDelegate.m */; };
 		102A30BB1F36F0CE0054F406 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A30BA1F36F0CE0054F406 /* AppDelegate.m */; };
 		102A30BE1F36F1220054F406 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102A30BD1F36F1220054F406 /* TestViewController.m */; };
@@ -36,6 +37,8 @@
 		101C989F1F346680001EDFFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101C98A21F346680001EDFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101C98A41F346680001EDFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1023123F1F3810FE009B68C5 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		102312401F3810FE009B68C5 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		102A30B61F36EE370054F406 /* ANYBaseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANYBaseAppDelegate.h; sourceTree = "<group>"; };
 		102A30B71F36EE370054F406 /* ANYBaseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANYBaseAppDelegate.m; sourceTree = "<group>"; };
 		102A30B91F36F0CE0054F406 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +139,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1023123E1F3810DF009B68C5 /* ANYButtonBadge */ = {
+			isa = PBXGroup;
+			children = (
+				1023123F1F3810FE009B68C5 /* UIButton+Badge.h */,
+				102312401F3810FE009B68C5 /* UIButton+Badge.m */,
+			);
+			path = ANYButtonBadge;
+			sourceTree = "<group>";
+		};
 		102A30B11F36E86D0054F406 /* ANYCustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +221,7 @@
 		102A30D11F3754A70054F406 /* ANYTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1023123E1F3810DF009B68C5 /* ANYButtonBadge */,
 				102A30DD1F3755690054F406 /* ANYTabBarView */,
 				102A30D31F3754CD0054F406 /* ANYTabBarModel */,
 				102A30D21F3754BE0054F406 /* ANYTabBarItem */,
@@ -315,6 +328,7 @@
 				102A30DC1F37554D0054F406 /* ANYTabBarModel.m in Sources */,
 				102A30BB1F36F0CE0054F406 /* AppDelegate.m in Sources */,
 				102A30E31F3768240054F406 /* MessageViewController.m in Sources */,
+				102312411F3810FE009B68C5 /* UIButton+Badge.m in Sources */,
 				101C989B1F346680001EDFFE /* ViewController.m in Sources */,
 				102A30B81F36EE380054F406 /* ANYBaseAppDelegate.m in Sources */,
 				102A30C81F371BD80054F406 /* ANYColor.m in Sources */,

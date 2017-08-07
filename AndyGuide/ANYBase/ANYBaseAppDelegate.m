@@ -52,8 +52,8 @@
     
     NSArray * selecteds = @[@"cooperation_icon_selected", @"mine_icon_selected", @"report_icon_selected", @"remoney_icon_selected"];
     
-    UIColor * normal = [UIColor lightGrayColor];
-    UIColor * selected = [UIColor colorWithRed:56/255.0 green:21/255.6 blue:96/255.0 alpha:1];
+    UIColor * normal = [ANYColor colorWithHexString:@"333333"];
+    UIColor * selected = [ANYColor colorWithHexString:@"#ea5404"];
     
     //创建TabBarViewController
     _tabBarView = [[ANYTabBarViewController alloc]initWithControllers:controllers andTitles:titles andNormalImages:normals andSelectedImages:selecteds andNormalColor:normal andSelectedColor:selected];
