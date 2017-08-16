@@ -6,8 +6,8 @@
 //  Copyright © 2017年 andy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ANYBaseViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : ANYBaseViewController
 
 @end
